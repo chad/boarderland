@@ -10,9 +10,7 @@ class Wunder::List
   delegate [:title] => :json
 
   def wunderlist_id
-    if json
-      json.id
-    end
+    json.id if json
   end
 
   def assignee_ids
